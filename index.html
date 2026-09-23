@@ -313,80 +313,29 @@ body::before {
         opacity: 0;
     }
 }
-    .couple {
-    position: relative;
-    width: 240px;
-    height: 150px;
-    margin: 0 auto 15px;
-    animation: coupleMove 4s ease-in-out infinite;
+        .couple-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 10px;
+    animation: coupleFloat 4s ease-in-out infinite;
 }
 
-.sun {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 42px;
-    animation: sunGlow 2s ease-in-out infinite alternate;
+.couple-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.person {
-    position: absolute;
-    bottom: 5px;
-    text-align: center;
-}
-
-.girl {
-    left: 65px;
-}
-
-.boy {
-    right: 65px;
-}
-
-.person .head {
-    font-size: 42px;
-}
-
-.person .body {
-    font-size: 38px;
-    margin-top: -5px;
-}
-
-.person .hand {
-    font-size: 25px;
-    position: absolute;
-    top: 55px;
-}
-
-.girl .hand {
-    right: -10px;
-}
-
-.boy .hand {
-    left: -10px;
-}
-
-@keyframes coupleMove {
+@keyframes coupleFloat {
     0%, 100% {
         transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-6px);
+        transform: translateY(-8px);
     }
 }
-
-@keyframes sunGlow {
-    from {
-        transform: translateX(-50%) scale(1);
-    }
-
-    to {
-        transform: translateX(-50%) scale(1.12);
-    }
-}
-    </style>
+        </style>
 </head>
 
 <body>
@@ -417,21 +366,12 @@ body::before {
 
 <section id="home">
 
-    <div class="couple">
-        <div class="sun">☀️</div>
+    <div class="couple-image">
+    <img src="couple.png" alt="Us">
+</div>
 
-        <div class="person girl">
-            <div class="head">👩🏻</div>
-            <div class="body">👗</div>
-            <div class="hand">🤝</div>
-            <div class="person boy">
-            <div class="head">👦🏻</div>
-            <div class="body">👕</div>
-            <div class="hand"></div>
-        </div>
-    </div>
-
-    <div class="heart"> 💞💖</div>
+<div class="heart">❤️</div>
+       <div class="heart"> 💞💖</div>
 
     <h1>4 Months of Us</h1>
 
