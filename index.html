@@ -242,6 +242,150 @@ body::before {
                 width: 85%;
             }
         }
+   .floating-hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 22px;
+    opacity: 0.6;
+    animation: floatHeart 10s linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 55%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 70%;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 82%;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 92%;
+    animation-delay: 6s;
+}
+
+.floating-hearts span:nth-child(8) {
+    left: 60%;
+    animation-delay: 7s;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(20deg);
+        opacity: 0;
+    }
+}
+    .couple {
+    position: relative;
+    width: 240px;
+    height: 150px;
+    margin: 0 auto 15px;
+    animation: coupleMove 4s ease-in-out infinite;
+}
+
+.sun {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 42px;
+    animation: sunGlow 2s ease-in-out infinite alternate;
+}
+
+.person {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+}
+
+.girl {
+    left: 35px;
+}
+
+.boy {
+    right: 35px;
+}
+
+.person .head {
+    font-size: 42px;
+}
+
+.person .body {
+    font-size: 38px;
+    margin-top: -5px;
+}
+
+.person .hand {
+    font-size: 25px;
+    position: absolute;
+    top: 55px;
+}
+
+.girl .hand {
+    right: -20px;
+}
+
+.boy .hand {
+    left: -20px;
+}
+
+@keyframes coupleMove {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes sunGlow {
+    from {
+        transform: translateX(-50%) scale(1);
+    }
+
+    to {
+        transform: translateX(-50%) scale(1.12);
+    }
+}
     </style>
 </head>
 
@@ -272,6 +416,22 @@ body::before {
 <!-- HOME -->
 
 <section id="home">
+
+    <div class="couple">
+        <div class="sun">☀️</div>
+
+        <div class="person girl">
+            <div class="head">👩🏻</div>
+            <div class="body">👗</div>
+            <div class="hand">🤝</div>
+        </div>
+
+        <div class="person boy">
+            <div class="head">👦🏻</div>
+            <div class="body">👕</div>
+            <div class="hand"></div>
+        </div>
+    </div>
 
     <div class="heart">❤️</div>
 
@@ -596,8 +756,6 @@ I want it to continue…
 
 <div class="forever">♾️</div>
 
-<h2>I Don't Just Want Another Month.</h2>
-
 <p>
     Heyyy, home... 🥹❤️
     <br><br>
@@ -634,11 +792,6 @@ I want it to continue…
 </p>
 
     <div class="forever">♾️</div>
-
-    <h2>I Don't Just Want Another Month.</h2>
-
-    <p>
-        I want a lifetime.
     </p>
 
     <br>
@@ -657,7 +810,7 @@ I want it to continue…
 
 
 <footer>
-    Made with love, just for you ❤️
+    Made with love, just for you- Yuvarajan Priyadharshinee💞🙈🫂
 </footer>
 
 
