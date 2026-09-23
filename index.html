@@ -167,6 +167,116 @@
             backdrop-filter: blur(8px);
         }
 
+        /* 📸 MINI PHOTO VIDEO */
+
+.photo-video {
+    position: relative;
+    width: 90%;
+    max-width: 650px;
+    height: 420px;
+    margin: 40px auto;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #ffdce9;
+    box-shadow: 0 15px 40px rgba(190, 70, 110, 0.25);
+}
+
+/* Each photo */
+.photo-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: photoShow 36s infinite;
+}
+
+/* Images */
+.photo-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Each photo appears one after another */
+
+.photo-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.photo-slide:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.photo-slide:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.photo-slide:nth-child(4) {
+    animation-delay: 9s;
+}
+
+.photo-slide:nth-child(5) {
+    animation-delay: 12s;
+}
+
+.photo-slide:nth-child(6) {
+    animation-delay: 15s;
+}
+
+.photo-slide:nth-child(7) {
+    animation-delay: 18s;
+}
+
+.photo-slide:nth-child(8) {
+    animation-delay: 21s;
+}
+
+.photo-slide:nth-child(9) {
+    animation-delay: 24s;
+}
+
+.photo-slide:nth-child(10) {
+    animation-delay: 27s;
+}
+
+.photo-slide:nth-child(11) {
+    animation-delay: 30s;
+}
+
+.photo-slide:nth-child(12) {
+    animation-delay: 33s;
+}
+
+
+/* Smooth photo-video animation */
+
+@keyframes photoShow {
+
+    0% {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    4% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    8% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    12% {
+        opacity: 0;
+        transform: scale(1.10);
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
     </style>
 
 </head>
@@ -186,3 +296,291 @@
     </div>
 
     <div class="container">
+        
+<!-- HOME -->
+
+<section id="home">
+
+    <div class="heart">❤️</div>
+
+    <h1>4 Months of Us 💞</h1>
+
+    <p>
+        From an unexpected friendship… 🫂✨
+        <br>
+        to becoming my lifeline… ❤️‍🩹🫶
+        <br>
+        this journey was never something I planned,
+        <br>
+        but it became the most beautiful part of my life. 🌙💞
+    </p>
+
+    <p>
+        And if this journey has brought me this far…
+        <br>
+        I don't want it to end here. ♾️❤️
+        <br>
+        I want it to continue…
+        <br>
+        <strong>for a lifetime, with you. 🥹💗</strong>
+    </p>
+
+    <button onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
+        Come… let's relive our beautiful 4-month journey together. 🥹💞
+    </button>
+
+</section>
+
+        <!-- OUR STORY -->
+
+<section id="story">
+
+    <h2>From Friends to My Lifeline 🌱❤️</h2>
+
+    <p>
+        Every little moment brought us closer...
+        <br>
+        So let's go back and relive them. 🥹💞
+    </p>
+
+    <div class="timeline">
+
+        <div class="moment">
+            <h3>Our Unexpected Beginning — August 16, 2025 🌱✨</h3>
+            <p>
+                Who knew that one unexpected meeting on August 16, 2025
+                would become the beginning of something so beautiful?
+                We met as friends, without knowing where this journey
+                would take us. ❤️
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>The Conversations That Brought Us Closer — November 15, 2025 💬🫶</h3>
+            <p>
+                Our conversations slowly started becoming something special.
+                November 15, 2025 gave us the time to truly know each other,
+                understand each other, and discover the little things
+                that made us feel closer every day. 💞
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>A Day I'll Never Forget — January 11, 2026 🌷❤️</h3>
+            <p>
+                Then came that beautiful full day with you.
+                Being with you in person, sharing every little moment,
+                laughing, talking and simply being together made that day
+                something I will carry with me for the rest of my life.
+                Truly unforgettable. 🥹💗
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>A Bond We Built — Early 2026 🤝❤️‍🩹</h3>
+            <p>
+                As our talks continued, something stronger started growing
+                between us — an unbreakable bond, trust, understanding,
+                and a comfort that made you feel like someone I could
+                always count on. 🫂✨
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>Our First Night Ride — March 31, 2026 🌙🏍️💞</h3>
+            <p>
+                And then came our first night ride together.
+                Just you, me, the road, the night and a memory
+                that will always have a special place in my heart.
+                One of those simple moments that felt like everything. 🌙❤️
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>Three Months of Us — March to June 2026 🥹🫶</h3>
+            <p>
+                Three months filled with everything — little fights,
+                endless happiness, silly moments, laughter, care,
+                understanding and so many memories.
+                Through every high and low, we kept choosing each other,
+                and our bond only became stronger. ❤️
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>Where Our Beautiful Relationship Began — June 28, 2026 💗✨</h3>
+            <p>
+                And then came June 28, 2026 — the day our beautiful
+                relationship officially began.
+                What started as an unexpected friendship had now become
+                something much more precious to both of us.
+                That was the beginning of our story as us. 🫶❤️
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>Two Days I'll Always Keep — My Birthday 🎂🏡❤️</h3>
+            <p>
+                And then came our little Airbnb stay on my birthday.
+                Two beautiful days with you that became unforgettable
+                and irreplaceable.
+                The little fights, cooking together, laughing, romance,
+                being silly and simply spending those days together —
+                every little moment became a memory I'll treasure forever. 🥹💞
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>And I Want This Forever — ♾️❤️</h3>
+            <p>
+                Thank you for choosing me. Thank you for being a part
+                of my life and for giving me something so beautiful to hold on to.
+                I don't want this journey to stop here.
+                I want more rides, more fights, more laughter,
+                more cooking, more memories and more love —
+                with you, for a lifetime. ❤️‍🩹🫶
+
+                <br><br>
+
+                I hope that through every chapter that comes next,
+                you will always be my love, my person,
+                and the love of my life. ♾️💗
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- MEMORIES -->
+
+<section id="memories">
+
+    <h2>Our Little Moments 📸💞</h2>
+
+    <p>
+        A few moments that became some of my favourite memories. 🥹❤️
+    </p>
+
+    <div class="photo-video">
+
+        <div class="photo-slide">
+            <img src="photo1.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo2.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo3.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo4.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo5.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo6.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo7.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo8.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo9.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo10.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo11.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo12.jpg">
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- LETTER -->
+
+<section id="letter">
+
+    <h2>ஒரு சிறிய கடிதம்... 💌</h2>
+
+    <div class="letter-card">
+
+        <p>
+            என் அழகியே... ❤️
+        </p>
+
+        <p>
+            உன்னிடம் சொல்ல வேண்டும் என்று நினைத்துக் கொண்டிருந்த
+            நிறைய விஷயங்கள் இருக்கிறது.
+        </p>
+
+        <p>
+            என் வாழ்க்கையில் நீ வந்தது நான் எதிர்பார்க்காத ஒரு அழகான
+            விஷயம். முதலில் ஒரு நட்பாக தொடங்கிய நம் பயணம்,
+            இன்று என் வாழ்க்கையின் மிக முக்கியமான உறவாக மாறிவிட்டது.
+        </p>
+
+        <p>
+            உன்னுடன் பேசும் ஒவ்வொரு நிமிடமும்,
+            உன்னுடன் இருக்கும் ஒவ்வொரு சிறிய தருணமும்,
+            எனக்கு மிகவும் சிறப்பானது. 🥹💗
+        </p>
+
+        <p>
+            சில நேரங்களில் நான் செய்யும் தவறுகளால் உன்னை
+            கஷ்டப்படுத்தி இருக்கலாம்.
+            ஆனால் உன்னை காயப்படுத்த வேண்டும் என்ற எண்ணம்
+            என் மனதில் ஒருபோதும் இருந்ததில்லை.
+        </p>
+
+        <p>
+            நீ என்னை தேர்ந்தெடுத்த அந்த அன்பை நான்
+            எப்போதும் மதிப்பேன்.
+            உன்னை இழக்க வேண்டும் என்ற எண்ணமே
+            எனக்கு மிகவும் பயமாக இருக்கிறது.
+        </p>
+
+        <p>
+            நம் வாழ்க்கையில் இன்னும் நிறைய நாட்கள்,
+            நிறைய சிரிப்புகள், நிறைய பயணங்கள்,
+            நிறைய சண்டைகள், நிறைய சமாதானங்கள்,
+            நிறைய நினைவுகள் இருக்க வேண்டும். 🫂❤️
+        </p>
+
+        <p>
+            இன்று நான்கு மாதங்கள்...
+            ஆனால் என் மனதில் இது ஒரு தொடக்கம் மட்டுமே.
+        </p>
+
+        <p>
+            இந்த பயணம் இன்னும் நீண்ட காலம்,
+            வாழ்நாள் முழுவதும்,
+            உன்னுடன் தொடர வேண்டும் என்று ஆசைப்படுகிறேன். ♾️💞
+        </p>
+
+        <p class="letter-ending">
+            என்றும் உன்னுடன்... ❤️
+        </p>
+
+    </div>
+
+</section>
