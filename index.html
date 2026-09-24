@@ -512,11 +512,13 @@ body::before {
 
 </div>
     <!-- Background Music -->
-<audio id="backgroundMusic" loop>
-    <source src="oursong.mp3" type="audio/mpeg">
+<audio id="bgMusic" loop>
+    <source src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/aa9beb18c8c533d9b3b34aa6320df91dc2064f7b/oursong.mp3" type="audio/mpeg">
 </audio>
 
-<button id="musicButton" onclick="toggleMusic()">🎵 Play Music</button>
+<button onclick="toggleMusic()" id="musicBtn">
+    🎵 Play Music
+</button>
 
 <!-- HOME -->
 
@@ -941,16 +943,16 @@ function openLetter() {
     document.getElementById("letterText").style.display = "block";
 }
 
-const music = document.getElementById("backgroundMusic");
-const musicButton = document.getElementById("musicButton");
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
 function toggleMusic() {
     if (music.paused) {
         music.play();
-        musicButton.innerHTML = "🎵 Music On";
+        musicBtn.innerHTML = "⏸️ Pause Music";
     } else {
         music.pause();
-        musicButton.innerHTML = "🔇 Music Off";
+        musicBtn.innerHTML = "🎵 Play Music";
     }
 }
 /* =========================
