@@ -1,1 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Only "US" 💞</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: linear-gradient(
+                135deg,
+                #ffe6f0,
+                #fff0f5,
+                #ffdce9,
+                #fff5f8
+            );
+            color: #5a3040;
+            overflow-x: hidden;
+        }
+
+        /* ☀️ Soft sunshine */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 320px;
+            height: 320px;
+            background: #fff3a6;
+            border-radius: 50%;
+            top: -120px;
+            right: -100px;
+            opacity: 0.45;
+            filter: blur(20px);
+            animation: sunshine 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        /* 💕 Floating happy things */
+        .floating {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .floating span {
+            position: absolute;
+            bottom: -40px;
+            font-size: 20px;
+            animation: floatUp linear infinite;
+            opacity: 0.7;
+        }
+
+        .floating span:nth-child(1) {
+            left: 10%;
+            animation-duration: 8s;
+        }
+
+        .floating span:nth-child(2) {
+            left: 25%;
+            animation-duration: 11s;
+            animation-delay: 2s;
+        }
+
+        .floating span:nth-child(3) {
+            left: 45%;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .floating span:nth-child(4) {
+            left: 65%;
+            animation-duration: 12s;
+            animation-delay: 3s;
+        }
+
+        .floating span:nth-child(5) {
+            left: 82%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+        @keyframes sunshine {
+
+            0%, 100% {
+                transform: scale(0.9);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0.55;
+            }
+
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+        /* Main content */
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #c94f7c;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #c94f7c;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* 💗 Soft cards */
+
+        .card {
+            background: rgba(255, 255, 255, 0.72);
+            border-radius: 25px;
+            padding: 35px;
+            margin: 30px auto;
+            box-shadow: 0 10px 30px rgba(190, 70, 110, 0.12);
+            backdrop-filter: blur(8px);
+        }
+/* 💌 SECRET LETTER */
+
+#letter {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.letter-intro {
+    margin-bottom: 35px;
+}
+
+.letter-intro span {
+    font-size: 45px;
+    display: block;
+    animation: letterHeart 2s ease-in-out infinite;
+}
+
+.letter-intro h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.letter-intro p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* The letter itself */
+
+.secret-letter {
+    position: relative;
+    max-width: 720px;
+    margin: auto;
+    padding: 55px 45px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.94),
+            rgba(255,246,249,0.96)
+        );
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 50px rgba(150, 60, 90, 0.18);
+
+    text-align: left;
+
+    border: 1px solid #f5c8d5;
+
+    animation: letterOpen 1.2s ease;
+}
+
+/* Small paper decoration */
+
+.secret-letter::before {
+    content: "♥";
+    position: absolute;
+    top: 18px;
+    left: 25px;
+    color: #e58aa7;
+    font-size: 18px;
+}
+
+.secret-letter::after {
+    content: "♥";
+    position: absolute;
+    bottom: 18px;
+    right: 25px;
+    color: #e58aa7;
+    font-size: 18px;
+}
+
+.letter-top {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.secret-letter p {
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 28px;
+    color: #633b49;
+}
+
+.secret-letter .dear {
+    font-size: 23px;
+    color: #c94f7c;
+    font-weight: bold;
+}
+
+.secret-letter strong {
+    color: #c94f7c;
+}
+
+/* Promise */
+
+.promise {
+    padding: 25px;
+    background: #fff0f5;
+    border-radius: 18px;
+    text-align: center;
+}
+
+/* Ending */
+
+.letter-ending {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px dashed #e8a9bc;
+    font-size: 20px;
+    line-height: 2;
+    color: #c94f7c;
+}
+
+/* Animations */
+
+@keyframes letterOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+@keyframes letterHeart {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 💕 Floating hearts and sparkles -->
+
+    <div class="floating">
+
+        <span>💕</span>
+        <span>✨</span>
+        <span>🌸</span>
+        <span>💗</span>
+        <span>☀️</span>
+
+    </div>
+
+    <div class="container">
+
+      <!-- HOME -->
+
+<section id="home">
+
+    <div class="heart">❤️</div>
+
+    <h1>4 Months of Us 💞</h1>
+
+    <p>
+        From an unexpected friendship… 🫂✨
+        <br>
+        to becoming my lifeline… ❤️‍🩹🫶
+        <br>
+        this journey was never something I planned,
+        <br>
+        but it became the most beautiful part of my life. 🌙💞
+    </p>
+
+    <p>
+        And if this journey has brought me this far…
+        <br>
+        I don't want it to end here. ♾️❤️
+        <br>
+        I want it to continue…
+        <br>
+        <strong>for a lifetime, with you. 🥹💗</strong>
+    </p>
+
+    <button onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
+        Come… let's relive our beautiful 4-month journey together. 🥹💞
+    </button>
+
+</section>
+<!-- OUR STORY -->
+
+<section id="story">
+
+    <h2>From Friends to My Lifeline 🌱❤️</h2>
+
+    <p>
+        Every little moment brought us closer...
+        <br>
+        So let's go back and relive them. 🥹💞
+    </p>
+
+    <div class="timeline">
+
+        <div class="moment">
+            <h3>Our Unexpected Beginning — August 16, 2025 🌱✨</h3>
+            <p>
+                Who knew that one unexpected meeting on August 16, 2025
+                would become the beginning of something so beautiful?
+                We met as friends, without knowing where this journey
+                would take us. ❤️
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>The Conversations That Brought Us Closer — November 15, 2025 💬🫶</h3>
+            <p>
+                Our conversations slowly started becoming something special.
+                November 15, 2025 gave us the time to truly know each other,
+                understand each other, and discover the little things
+                that made us feel closer every day. 💞
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>A Day I'll Never Forget — January 11, 2026 🌷❤️</h3>
+            <p>
+                Then came that beautiful full day with you.
+                Being with you in person, sharing every little moment,
+                laughing, talking and simply being together made that day
+                something I will carry with me for the rest of my life.
+                Truly unforgettable. 🥹💗
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>A Bond We Built — Early 2026 🤝❤️‍🩹</h3>
+            <p>
+                As our talks continued, something stronger started growing
+                between us — an unbreakable bond, trust, understanding,
+                and a comfort that made you feel like someone I could
+                always count on. 🫂✨
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>Our First Night Ride — March 31, 2026 🌙🏍️💞</h3>
+            <p>
+                And then came our first night ride together.
+                Just you, me, the road, the night and a memory
+                that will always have a special place in my heart.
+                One of those simple moments that felt like everything. 🌙❤️
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>Three Months of Us — March to June 2026 🥹🫶</h3>
+            <p>
+                Three months filled with everything — little fights,
+                endless happiness, silly moments, laughter, care,
+                understanding and so many memories.
+                Through every high and low, we kept choosing each other,
+                and our bond only became stronger. ❤️
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>Where Our Beautiful Relationship Began — June 28, 2026 💗✨</h3>
+            <p>
+                And then came June 28, 2026 — the day our beautiful
+                relationship officially began.
+                What started as an unexpected friendship had now become
+                something much more precious to both of us.
+                That was the beginning of our story as us. 🫶❤️
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>Two Days I'll Always Keep — My Birthday 🎂🏡❤️</h3>
+            <p>
+                And then came our little Airbnb stay on my birthday.
+                Two beautiful days with you that became unforgettable
+                and irreplaceable.
+                The little fights, cooking together, laughing, romance,
+                being silly and simply spending those days together —
+                every little moment became a memory I'll treasure forever. 🥹💞
+            </p>
+        </div>
+
+        <div class="moment">
+            <h3>And I Want This Forever — ♾️❤️</h3>
+            <p>
+                Thank you for choosing me. Thank you for being a part
+                of my life and for giving me something so beautiful to hold on to.
+                I don't want this journey to stop here.
+                I want more rides, more fights, more laughter,
+                more cooking, more memories and more love —
+                with you, for a lifetime. ❤️‍🩹🫶
+
+                <br><br>
+
+                I hope that through every chapter that comes next,
+                you will always be my love, my person,
+                and the love of my life. ♾️💗
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- MEMORIES -->
+
+<section id="memories">
+
+    <h2>Our Little Moments 📸💞</h2>
+
+    <p>
+        A few moments that became some of my favourite memories. 🥹❤️
+    </p>
+
+    <div class="photo-video">
+
+        <div class="photo-slide">
+            <img src="photo1.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo2.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo3.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo4.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo5.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo6.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo7.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo8.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo9.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo10.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo11.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="photo12.jpg">
+        </div>
+
+    </div>
+
+</section>
+<!-- SECRET LETTER -->
+
+<section id="letter">
+
+    <div class="letter-intro">
+        <span>💌</span>
+        <h2>A Little Letter For You...</h2>
+        <p>Open this with your heart, my love. 🥹❤️</p>
+    </div>
+
+    <div class="secret-letter">
+
+        <div class="letter-top">
+            💗
+        </div>
+
+        <p class="dear">
+            என் உயிரே, ❤️
+        </p>
+
+        <p>
+            நான்கு மாதங்கள்...
+            <br>
+            காலம் பார்த்தால் இது சிறியதாக இருக்கலாம்.
+            ஆனால் இந்த நான்கு மாதங்களில்
+            நீ என் வாழ்க்கையில் விட்டுச் சென்ற
+            நினைவுகள் மட்டும் அளவிட முடியாதவை. 🥹
+        </p>
+
+        <p>
+            எதிர்பாராமல் தொடங்கிய நம் நட்பு,
+            இன்று என் வாழ்க்கையின் மிக அழகான
+            பகுதியாக மாறிவிட்டது.
+            <br><br>
+            உன்னுடன் பேசும் ஒவ்வொரு நொடியும்,
+            உன்னுடன் இருக்கும் ஒவ்வொரு சிறிய தருணமும்,
+            எனக்கு மிகவும் முக்கியமானதாகிவிட்டது. 🫂💗
+        </p>
+
+        <p>
+            நீ என்னை புரிந்துகொண்ட விதம்...
+            <br>
+            என்னை குழந்தையைப் போல பார்த்துக்கொண்ட விதம்...
+            <br>
+            நான் சொல்லாமலே என்னை புரிந்துகொண்ட அந்த அன்பு...
+            <br><br>
+            இவை எல்லாம் எனக்கு
+            நீ எவ்வளவு முக்கியமானவள் என்பதை
+            ஒவ்வொரு நாளும் உணர்த்துகிறது. ❤️‍🩹
+        </p>
+
+        <p>
+            என் வாழ்க்கையை அழகாக மாற்றிய
+            அழகியே... 🌸
+            <br><br>
+            உன்னை நான் ஏன் தேர்ந்தெடுத்தேன் என்று
+            என்னிடம் கேட்டால்...
+            <br>
+            அதற்கு ஒரு குறிப்பிட்ட காரணம் இல்லை.
+            <br><br>
+            <strong>
+                ஏனென்றால் நீ தான் நீ.
+            </strong>
+            ❤️
+        </p>
+
+        <p>
+            நீ சோகமாக இருப்பதை,
+            அழுவதை,
+            மனதில் எதையாவது வைத்துக்கொண்டு
+            கஷ்டப்படுவதை என்னால் பார்க்க முடியாது.
+            <br><br>
+            ஒரு குழந்தை தன் அம்மா சோகமாக இருப்பதை
+            விரும்பாதது போல...
+            <br>
+            நீ சோகமாக இருக்கக்கூடாது என்பதுதான்
+            என் மனதின் ஒரே ஆசை. 🥺🫂
+        </p>
+
+        <p>
+            என்ன நடந்தாலும்...
+            <br>
+            எத்தனை சின்ன சண்டைகள் வந்தாலும்...
+            <br>
+            எத்தனை கடினமான நாட்கள் வந்தாலும்...
+            <br><br>
+            <strong>
+                நான் மீண்டும் மீண்டும்
+                உன்னையே தேர்ந்தெடுப்பேன்.
+            </strong>
+            ❤️
+        </p>
+
+        <p>
+            உன்னை சந்தோஷமாக வைத்திருக்க
+            என்னால் முடிந்த அனைத்தையும் செய்வேன்.
+            <br><br>
+            உன் கனவுகள் நனவாகும் நாளை
+            உன்னுடன் நின்று பார்க்க வேண்டும்.
+            <br>
+            உன் வெற்றியில் உன்னைவிட
+            அதிகமாக சந்தோஷப்பட வேண்டும்.
+            🥹💞
+        </p>
+
+        <p>
+            இந்த நான்கு மாதங்கள்
+            என் வாழ்க்கையின் முடிவு அல்ல...
+            <br><br>
+            இது நம் வாழ்நாள் கதையின்
+            முதல் சில பக்கங்கள் மட்டுமே. ♾️
+        </p>
+
+        <p>
+            இன்னும் நிறைய நினைவுகள் வேண்டும்...
+            <br>
+            இன்னும் நிறைய சிரிப்புகள் வேண்டும்...
+            <br>
+            இன்னும் நிறைய சண்டைகள்,
+            சமாதானங்கள்,
+            பயணங்கள்,
+            இரவு நேர பேச்சுகள்,
+            சமையல்,
+            காதல்...
+            <br><br>
+            எல்லாமே உன்னுடன் வேண்டும். ❤️
+        </p>
+
+        <p class="promise">
+            என்னை தேர்ந்தெடுத்ததற்கு நன்றி, என் அன்பே. ❤️
+            <br><br>
+            மீண்டும் ஒரு முறை வாழ்க்கையை
+            தேர்ந்தெடுக்க சொன்னாலும்...
+            <br>
+            நான் தேர்ந்தெடுப்பது
+            <strong>உன்னைத்தான்.</strong>
+        </p>
+
+        <div class="letter-ending">
+            <span>என்றும் உன்னுடன்...</span>
+            <br>
+            <strong>உன் காதல் ❤️♾️</strong>
+        </div>
+
+    </div>
+
+</section>
