@@ -1,411 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only "US" 💞</title>
 
-<title>Our Story ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* ============================= */
-/* BASIC */
-/* ============================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
+       body {
     font-family: Georgia, serif;
-    background: #fff7f8;
+    background: linear-gradient(
+        135deg,
+        #fff8fa,
+        #ffe8ef,
+        #fff4d6
+    );
     color: #3d2028;
     text-align: center;
     overflow-x: hidden;
 }
 
-/* ============================= */
-/* FLOATING HEART BACKGROUND */
-/* ============================= */
+/* ☀️ Soft sunshine */
 
-.hearts {
+body::before {
+    content: "";
     position: fixed;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+
+    background: #ffe98a;
+
+    top: -120px;
+    right: -100px;
+
+    opacity: 0.45;
+    filter: blur(25px);
+
+    animation: sunshine 6s ease-in-out infinite;
+
+    z-index: -2;
 }
 
-.hearts span {
-    position: absolute;
-    bottom: -60px;
-    font-size: 22px;
-    opacity: 0.65;
-    animation: floatHeart linear infinite;
-}
-
-/* Different positions */
-
-.hearts span:nth-child(1) {
-    left: 5%;
-    animation-duration: 9s;
-    animation-delay: 0s;
-}
-
-.hearts span:nth-child(2) {
-    left: 15%;
-    animation-duration: 12s;
-    animation-delay: 2s;
-}
-
-.hearts span:nth-child(3) {
-    left: 27%;
-    animation-duration: 8s;
-    animation-delay: 4s;
-}
-
-.hearts span:nth-child(4) {
-    left: 40%;
-    animation-duration: 11s;
-    animation-delay: 1s;
-}
-
-.hearts span:nth-child(5) {
-    left: 52%;
-    animation-duration: 10s;
-    animation-delay: 3s;
-}
-
-.hearts span:nth-child(6) {
-    left: 65%;
-    animation-duration: 13s;
-    animation-delay: 0s;
-}
-
-.hearts span:nth-child(7) {
-    left: 77%;
-    animation-duration: 9s;
-    animation-delay: 4s;
-}
-
-.hearts span:nth-child(8) {
-    left: 90%;
-    animation-duration: 11s;
-    animation-delay: 2s;
-}
-
-@keyframes floatHeart {
-
-    0% {
-        transform: translateY(0) rotate(0deg) scale(0.8);
-        opacity: 0;
-    }
-
-    15% {
-        opacity: 0.65;
-    }
-
-    50% {
-        transform: translateY(-50vh) rotate(15deg) scale(1);
-    }
-
-    100% {
-        transform: translateY(-115vh) rotate(-20deg) scale(1.2);
-        opacity: 0;
-    }
-
-}
-
-/* ============================= */
-/* CONTENT */
-/* ============================= */
-
-section {
-    min-height: 100vh;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    z-index: 1;
-}
-
-h1 {
-    font-size: 55px;
-    margin-bottom: 20px;
-    color: #b52f55;
-}
-
-h2 {
-    font-size: 38px;
-    margin-bottom: 25px;
-    color: #b52f55;
-}
-
-p {
-    max-width: 650px;
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-button {
-    margin-top: 30px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    background: #b52f55;
-    color: white;
-    font-size: 17px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 8px 20px rgba(181,47,85,0.2);
-}
-
-button:hover {
-    transform: scale(1.07);
-}
-
-/* ============================= */
-/* HOME */
-/* ============================= */
-
-#home {
-    background: linear-gradient(
-        135deg,
-        #fff0f4,
-        #ffe0e8,
-        #fff5f7
-    );
-}
-
-.heart {
-    font-size: 75px;
-    margin-bottom: 20px;
-    animation: heartbeat 1.5s infinite;
-}
-
-@keyframes heartbeat {
+@keyframes sunshine {
 
     0%, 100% {
-        transform: scale(1);
+        transform: scale(0.9);
+        opacity: 0.3;
     }
 
     50% {
         transform: scale(1.15);
+        opacity: 0.5;
     }
-
 }
 
-/* ============================= */
-/* STORY */
-/* ============================= */
+        section {
+            min-height: 100vh;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-#story {
-    background: rgba(255,255,255,0.88);
+        h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            max-width: 650px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #8b2635;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        /* HOME */
+
+        #home {
+            background: linear-gradient(#fff1f4, #ffe1e7);
+        }
+
+        .heart {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        /* STORY */
+
+        #story {
+            background: #fff;
+        }
+
+        .timeline {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .moment {
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 20px;
+            background: #fff1f3;
+        }
+
+        .moment h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* PHOTOS */
+
+        #memories {
+            background: #fff7f8;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+        }
+
+        .photo {
+            width: 250px;
+            height: 280px;
+            background: white;
+            padding: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: rotate(-2deg);
+        }
+
+        .photo:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .photo p {
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        /* LETTER */
+
+        #letter {
+            background: #fff0f3;
+        }
+
+        .letter-box {
+            max-width: 700px;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        #letterText {
+            display: none;
+            margin-top: 30px;
+        }
+
+        /* REASONS */
+
+        #reasons {
+            background: #fff;
+        }
+
+        .reason {
+            font-size: 23px;
+            margin: 18px;
+        }
+
+        /* FUTURE */
+
+        #future {
+            background: linear-gradient(#ffe4ea, #fff7f8);
+        }
+
+        .forever {
+            font-size: 70px;
+            margin: 30px;
+        }
+
+        footer {
+            padding: 30px;
+            background: #3d2028;
+            color: white;
+        }
+
+        @media(max-width:600px) {
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 17px;
+            }
+
+            .photo {
+                width: 85%;
+            }
+        }
+   .floating-hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
 }
 
-.timeline {
-    max-width: 700px;
-    width: 100%;
+.floating-hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 22px;
+    opacity: 0.6;
+    animation: floatHeart 10s linear infinite;
 }
 
-.moment {
-    padding: 28px;
-    margin: 22px 0;
-    border-radius: 25px;
-    background: #fff1f3;
-    box-shadow: 0 8px 25px rgba(180,60,90,0.08);
-    transition: 0.3s;
+.floating-hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
 }
 
-.moment:hover {
-    transform: translateY(-5px);
+.floating-hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
 }
 
-.moment h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
-    color: #b52f55;
+.floating-hearts span:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
 }
 
-.moment p {
-    font-size: 18px;
+.floating-hearts span:nth-child(4) {
+    left: 55%;
+    animation-delay: 1s;
 }
 
-/* ============================= */
-/* MEMORIES */
-/* ============================= */
-
-#memories {
-    background: #fff7f8;
+.floating-hearts span:nth-child(5) {
+    left: 70%;
+    animation-delay: 5s;
 }
 
-/* ============================= */
-/* LETTER */
-/* ============================= */
-
-#letter {
-    background: linear-gradient(
-        135deg,
-        #fff0f3,
-        #ffe4eb
-    );
+.floating-hearts span:nth-child(6) {
+    left: 82%;
+    animation-delay: 3s;
 }
 
-.letter-box {
-    max-width: 750px;
-    width: 100%;
-    background: rgba(255,255,255,0.92);
-    padding: 45px;
-    border-radius: 30px;
-
-    box-shadow:
-        0 15px 40px rgba(160,50,80,0.15);
+.floating-hearts span:nth-child(7) {
+    left: 92%;
+    animation-delay: 6s;
 }
 
-.letter-box h2 {
-    margin-bottom: 15px;
+.floating-hearts span:nth-child(8) {
+    left: 60%;
+    animation-delay: 7s;
 }
 
-#letterText {
-    display: none;
-    margin-top: 35px;
-    padding-top: 30px;
-    border-top: 1px dashed #d98ba0;
-    animation: letterOpen 1s ease;
-}
-
-#letterText p {
-    font-size: 19px;
-    line-height: 2;
-}
-
-@keyframes letterOpen {
-
-    from {
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
         opacity: 0;
-        transform: translateY(25px);
     }
 
-    to {
-        opacity: 1;
+    20% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(20deg);
+        opacity: 0;
+    }
+}
+        .couple-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 10px;
+    animation: coupleFloat 4s ease-in-out infinite;
+}
+
+.couple-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes coupleFloat {
+    0%, 100% {
         transform: translateY(0);
     }
 
+    50% {
+        transform: translateY(-8px);
+    }
 }
-
-/* ============================= */
-/* REASONS */
-/* ============================= */
-
-#reasons {
-    background: rgba(255,255,255,0.9);
-}
-
-.reason {
-    font-size: 23px;
-    margin: 18px;
-    color: #8b2635;
-
-    background: #fff1f4;
-    padding: 15px 30px;
-    border-radius: 30px;
-
-    box-shadow: 0 5px 15px rgba(180,60,90,0.08);
-
-    transition: 0.3s;
-}
-
-.reason:hover {
-    transform: scale(1.05);
-}
-
-/* ============================= */
-/* FUTURE */
-/* ============================= */
-
-#future {
-    background: linear-gradient(
-        #ffe4ea,
-        #fff7f8
-    );
-}
-
-.forever {
-    font-size: 70px;
-    margin: 30px;
-    animation: heartbeat 2s infinite;
-}
-
-/* ============================= */
-/* FOOTER */
-/* ============================= */
-
-footer {
+        .photo-video {
     position: relative;
-    z-index: 2;
-    padding: 30px;
-    background: #3d2028;
-    color: white;
+    width: 90%;
+    max-width: 500px;
+    height: 420px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 25px;
+    background: #ffe4ec;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* ============================= */
-/* MOBILE */
-/* ============================= */
+.photo-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: photoShow 48s infinite;
+}
 
-@media(max-width:600px) {
+.photo-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 
-    h1 {
-        font-size: 40px;
+/* 12 photos = 4 seconds each */
+
+.photo-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.photo-slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.photo-slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.photo-slide:nth-child(4) {
+    animation-delay: 12s;
+}
+
+.photo-slide:nth-child(5) {
+    animation-delay: 16s;
+}
+
+.photo-slide:nth-child(6) {
+    animation-delay: 20s;
+}
+
+.photo-slide:nth-child(7) {
+    animation-delay: 24s;
+}
+
+.photo-slide:nth-child(8) {
+    animation-delay: 28s;
+}
+
+.photo-slide:nth-child(9) {
+    animation-delay: 32s;
+}
+
+.photo-slide:nth-child(10) {
+    animation-delay: 36s;
+}
+
+.photo-slide:nth-child(11) {
+    animation-delay: 40s;
+}
+
+.photo-slide:nth-child(12) {
+    animation-delay: 44s;
+}
+
+@keyframes photoShow {
+
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
     }
 
-    h2 {
-        font-size: 30px;
+    5% {
+        opacity: 1;
+        transform: scale(1);
     }
 
-    p {
-        font-size: 17px;
+    28% {
+        opacity: 1;
+        transform: scale(1.03);
     }
 
-    .moment {
-        padding: 22px;
+    33% {
+        opacity: 0;
+        transform: scale(1.08);
     }
 
-    .moment h3 {
-        font-size: 21px;
-    }
-
-        .letter-box {
-        padding: 30px 22px;
-    }
-
-    .reason {
-        font-size: 19px;
-        margin: 12px;
+    100% {
+        opacity: 0;
     }
 
 }
-
-</style>
-
+        </style>
 </head>
 
 <body>
+    <!-- 💕 FLOATING HEART BACKGROUND -->
 
-
-<!-- FLOATING HEARTS -->
-
-<div class="hearts">
+<div class="floating-hearts">
 
     <span>❤️</span>
     <span>💕</span>
@@ -415,177 +454,176 @@ footer {
     <span>❤️</span>
     <span>💓</span>
     <span>💕</span>
+    <span>💗</span>
+    <span>💖</span>
 
 </div>
+    <!-- Background Music -->
+<audio id="backgroundMusic" loop>
+    <source src="oursong.mp3" type="audio/mpeg">
+</audio>
 
+<button id="musicButton" onclick="toggleMusic()">🎵 Play Music</button>
 
-      <!-- HOME -->
+<!-- HOME -->
 
 <section id="home">
 
-    <div class="heart">❤️</div>
+    <section id="home">
+    <!-- Float Graphic (REPLACE 'couple.png' with your vector/illustration file name) -->
+    <div class="couple-image">
+        <img src="https://github.com/yuvarajan824-glitch/our-story/blob/ebf6aaa3e8b2a8c0201fcc1cbad33a3e9d3d97b2/couple.png>
+    </div>
 
-    <h1>4 Months of Us 💞</h1>
-
+    <div class="heart"> 💞💖</div>
+    <h1>4 Months of Us</h1>
     <p>
-        From an unexpected friendship… 🫂✨
-        <br>
-        to becoming my lifeline… ❤️‍🩹🫶
-        <br>
-        this journey was never something I planned,
-        <br>
-        but it became the most beautiful part of my life. 🌙💞
+From an unexpected friendship… 🫂✨
+to becoming my lifeline… ❤️‍🩹🫶
+this journey was never something I planned,
+but it became the most beautiful part of my life. 🌙💞
+
+And if this journey has brought me this far…
+I don't want it to end here. ♾️❤️
+I want it to continue…
+**for a lifetime, with you.** 🥹💗
+
     </p>
 
-    <p>
-        And if this journey has brought me this far…
-        <br>
-        I don't want it to end here. ♾️❤️
-        <br>
-        I want it to continue…
-        <br>
-        <strong>for a lifetime, with you. 🥹💗</strong>
-    </p>
-
-    <button onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
-        Come… let's relive our beautiful 4-month journey together. 🥹💞
+    <button onclick="document.getElementById('story').scrollIntoView()">
+        Come… let's relive our beautiful 4-month journey together. 🥹💞 →
     </button>
 
 </section>
-<!-- OUR STORY -->
+
+
+<!-- STORY -->
 
 <section id="story">
 
-    <h2>From Friends to My Lifeline 🌱❤️</h2>
+    <h2>From Friends to My Lifeline 🌱</h2>
 
-    <p>
-        Every little moment brought us closer...
-        <br>
-        So let's go back and relive them. 🥹💞
-    </p>
+<div class="timeline">
 
-    <div class="timeline">
-
-        <div class="moment">
-            <h3>Our Unexpected Beginning — August 16, 2025 🌱✨</h3>
-            <p>
-                Who knew that one unexpected meeting on August 16, 2025
-                would become the beginning of something so beautiful?
-                We met as friends, without knowing where this journey
-                would take us. ❤️
-            </p>
-        </div>
-
-        <div class="moment">
-            <h3>The Conversations That Brought Us Closer — November 15, 2025 💬🫶</h3>
-            <p>
-                Our conversations slowly started becoming something special.
-                November 15, 2025 gave us the time to truly know each other,
-                understand each other, and discover the little things
-                that made us feel closer every day. 💞
-            </p>
-        </div>
-
-        <div class="moment">
-            <h3>A Day I'll Never Forget — January 11, 2026 🌷❤️</h3>
-            <p>
-                Then came that beautiful full day with you.
-                Being with you in person, sharing every little moment,
-                laughing, talking and simply being together made that day
-                something I will carry with me for the rest of my life.
-                Truly unforgettable. 🥹💗
-            </p>
-        </div>
-
-        <div class="moment">
-            <h3>A Bond We Built — Early 2026 🤝❤️‍🩹</h3>
-            <p>
-                As our talks continued, something stronger started growing
-                between us — an unbreakable bond, trust, understanding,
-                and a comfort that made you feel like someone I could
-                always count on. 🫂✨
-            </p>
-        </div>
-
-        <div class="moment">
-            <h3>Our First Night Ride — March 31, 2026 🌙🏍️💞</h3>
-            <p>
-                And then came our first night ride together.
-                Just you, me, the road, the night and a memory
-                that will always have a special place in my heart.
-                One of those simple moments that felt like everything. 🌙❤️
-            </p>
-        </div>
-
-        <div class="moment">
-            <h3>Three Months of Us — March to June 2026 🥹🫶</h3>
-            <p>
-                Three months filled with everything — little fights,
-                endless happiness, silly moments, laughter, care,
-                understanding and so many memories.
-                Through every high and low, we kept choosing each other,
-                and our bond only became stronger. ❤️
-            </p>
-        </div>
-
-        <div class="moment">
-            <h3>Where Our Beautiful Relationship Began — June 28, 2026 💗✨</h3>
-            <p>
-                And then came June 28, 2026 — the day our beautiful
-                relationship officially began.
-                What started as an unexpected friendship had now become
-                something much more precious to both of us.
-                That was the beginning of our story as us. 🫶❤️
-            </p>
-        </div>
-
-        <div class="moment">
-            <h3>Two Days I'll Always Keep — My Birthday 🎂🏡❤️</h3>
-            <p>
-                And then came our little Airbnb stay on my birthday.
-                Two beautiful days with you that became unforgettable
-                and irreplaceable.
-                The little fights, cooking together, laughing, romance,
-                being silly and simply spending those days together —
-                every little moment became a memory I'll treasure forever. 🥹💞
-            </p>
-        </div>
-
-        <div class="moment">
-            <h3>And I Want This Forever — ♾️❤️</h3>
-            <p>
-                Thank you for choosing me. Thank you for being a part
-                of my life and for giving me something so beautiful to hold on to.
-                I don't want this journey to stop here.
-                I want more rides, more fights, more laughter,
-                more cooking, more memories and more love —
-                with you, for a lifetime. ❤️‍🩹🫶
-
-                <br><br>
-
-                I hope that through every chapter that comes next,
-                you will always be my love, my person,
-                and the love of my life. ♾️💗
-            </p>
-        </div>
-
+    <div class="moment">
+        <h3>Our Unexpected Beginning — August 16, 2025 🌱✨</h3>
+        <p>
+            Who knew that one unexpected meeting on August 16, 2025
+            would become the beginning of something so beautiful? 
+            We met as friends, without knowing where this journey
+            would take us. ❤️
+        </p>
     </div>
 
+    <div class="moment">
+        <h3>The Conversations That Brought Us Closer — November 15, 2025 💬🫶</h3>
+        <p>
+            Our conversations slowly started becoming something special.
+            November 15, 2025 gave us the time to truly know each other,
+            understand each other, and discover the little things
+            that made us feel closer every day. 💞
+        </p>
+    </div>
+
+    <div class="moment">
+        <h3>A Day I'll Never Forget — January 11, 2026 🌷❤️</h3>
+        <p>
+            Then came that beautiful full day with you.
+            Being with you in person, sharing every little moment,
+            laughing, talking and simply being together made that day
+            something I will carry with me for the rest of my life.
+            Truly unforgettable. 🥹💗
+        </p>
+    </div>
+
+    <div class="moment">
+        <h3>A Bond We Built — Early 2026 🤝❤️‍🩹</h3>
+        <p>
+            As our talks continued, something stronger started growing
+            between us — an unbreakable bond, trust, understanding,
+            and a comfort that made you feel like someone I could
+            always count on. 🫂✨
+        </p>
+    </div>
+
+    <div class="moment">
+        <h3>Our First Night Ride — March 31, 2026 🌙🏍️💞</h3>
+        <p>
+            And then came our first night ride together.
+            Just you, me, the road, the night and a memory
+            that will always have a special place in my heart.
+            One of those simple moments that felt like everything. 🌙❤️
+        </p>
+    </div>
+
+    <div class="moment">
+        <h3>Three Months of Us — March to June 2026 🥹🫶</h3>
+        <p>
+            Three months filled with everything — little fights,
+            endless happiness, silly moments, laughter, care,
+            understanding and so many memories.
+            Through every high and low, we kept choosing each other,
+            and our bond only became stronger. ❤️
+        </p>
+    </div>
+
+    <div class="moment">
+        <h3>Where Our Beautiful Relationship Began — June 28, 2026 💗✨</h3>
+        <p>
+            And then came June 28, 2026 — the day our beautiful
+            relationship officially began.
+            What started as an unexpected friendship had now become
+            something much more precious to both of us.
+            That was the beginning of our story as us. 🫶❤️
+        </p>
+    </div>
+
+    <div class="moment">
+        <h3>Two Days I'll Always Keep — My Birthday 🎂🏡❤️</h3>
+        <p>
+            And then came our little Airbnb stay on my birthday.
+            Two beautiful days with you that became unforgettable
+            and irreplaceable.
+            The little fights, cooking together, laughing, romance,
+            being silly and simply spending those days together —
+            every little moment became a memory I'll treasure forever. 🥹💞
+        </p>
+    </div>
+
+    <div class="moment">
+        <h3>And I Want This Forever — ♾️❤️</h3>
+        <p>
+            Thank you for choosing me. Thank you for being a part
+            of my life and for giving me something so beautiful to hold on to.
+            I don't want this journey to stop here.
+            I want more rides, more fights, more laughter,
+            more cooking, more memories and more love —
+            with you, for a lifetime. ❤️‍🩹🫶
+            <br><br>
+            I hope that through every chapter that comes next,
+            you will always be my love, my person,
+            and the love of my life. ♾️💗
+        </p>
+    </div>
+
+</div>
+
 </section>
+
 <!-- MEMORIES -->
 
 <section id="memories">
 
+    <section id="memories">
+
     <h2>Our Little Moments 📸💞</h2>
 
-    <p>
-        A few moments that became some of my favourite memories. 🥹❤️
-    </p>
+    <p>A few moments that became some of my favourite memories. 🥹❤️</p>
 
     <div class="photo-video">
 
         <div class="photo-slide">
-            <img src="photo1.jpg">
+            <img src="https://github.com/yuvarajan824-glitch/our-story/blob/f02ec92c8bcf4e98624fbbdbaddf78433dcfb57e/photo1.jpg">
         </div>
 
         <div class="photo-slide">
@@ -635,150 +673,231 @@ footer {
     </div>
 
 </section>
-<!-- SECRET LETTER -->
+
+<!-- LETTER -->
 
 <section id="letter">
 
-    <div class="letter-intro">
-        <span>💌</span>
-        <h2>A Little Letter For You...</h2>
-        <p>Open this with your heart, my love. 🥹❤️</p>
-    </div>
+    <div class="letter-box">
 
-    <div class="secret-letter">
-
-        <div class="letter-top">
-            💗
-        </div>
-
-        <p class="dear">
-            என் உயிரே, ❤️
-        </p>
+        <h2>There's Something I Want To Tell You 💌</h2>
 
         <p>
-            நான்கு மாதங்கள்...
-            <br>
-            காலம் பார்த்தால் இது சிறியதாக இருக்கலாம்.
-            ஆனால் இந்த நான்கு மாதங்களில்
-            நீ என் வாழ்க்கையில் விட்டுச் சென்ற
-            நினைவுகள் மட்டும் அளவிட முடியாதவை. 🥹
+            Maybe I've said some of these things before...
+            but I wanted you to have them here.
         </p>
 
-        <p>
-            எதிர்பாராமல் தொடங்கிய நம் நட்பு,
-            இன்று என் வாழ்க்கையின் மிக அழகான
-            பகுதியாக மாறிவிட்டது.
-            <br><br>
-            உன்னுடன் பேசும் ஒவ்வொரு நொடியும்,
-            உன்னுடன் இருக்கும் ஒவ்வொரு சிறிய தருணமும்,
-            எனக்கு மிகவும் முக்கியமானதாகிவிட்டது. 🫂💗
-        </p>
+        <button onclick="openLetter()">
+            Open My Letter 💗
+        </button>
 
-        <p>
-            நீ என்னை புரிந்துகொண்ட விதம்...
-            <br>
-            என்னை குழந்தையைப் போல பார்த்துக்கொண்ட விதம்...
-            <br>
-            நான் சொல்லாமலே என்னை புரிந்துகொண்ட அந்த அன்பு...
-            <br><br>
-            இவை எல்லாம் எனக்கு
-            நீ எவ்வளவு முக்கியமானவள் என்பதை
-            ஒவ்வொரு நாளும் உணர்த்துகிறது. ❤️‍🩹
-        </p>
+        <div id="letterText">
 
-        <p>
-            என் வாழ்க்கையை அழகாக மாற்றிய
-            அழகியே... 🌸
-            <br><br>
-            உன்னை நான் ஏன் தேர்ந்தெடுத்தேன் என்று
-            என்னிடம் கேட்டால்...
-            <br>
-            அதற்கு ஒரு குறிப்பிட்ட காரணம் இல்லை.
-            <br><br>
-            <strong>
-                ஏனென்றால் நீ தான் நீ.
-            </strong>
-            ❤️
-        </p>
+            <p>
+    என் உலகமே... ❤️ <br><br>
 
-        <p>
-            நீ சோகமாக இருப்பதை,
-            அழுவதை,
-            மனதில் எதையாவது வைத்துக்கொண்டு
-            கஷ்டப்படுவதை என்னால் பார்க்க முடியாது.
-            <br><br>
-            ஒரு குழந்தை தன் அம்மா சோகமாக இருப்பதை
-            விரும்பாதது போல...
-            <br>
-            நீ சோகமாக இருக்கக்கூடாது என்பதுதான்
-            என் மனதின் ஒரே ஆசை. 🥺🫂
-        </p>
+உன்னுடன் கழித்த இந்த நான்கு மாதங்கள்,
+சிறிய காலமாக இருந்தாலும்,
+நீ எனக்குக் கொடுத்த நினைவுகள்
+என் வாழ்நாள் முழுவதும் என்னுடன் இருக்கும். 🥹💞 <br><br>
 
-        <p>
-            என்ன நடந்தாலும்...
-            <br>
-            எத்தனை சின்ன சண்டைகள் வந்தாலும்...
-            <br>
-            எத்தனை கடினமான நாட்கள் வந்தாலும்...
-            <br><br>
-            <strong>
-                நான் மீண்டும் மீண்டும்
-                உன்னையே தேர்ந்தெடுப்பேன்.
-            </strong>
-            ❤️
-        </p>
+என்னைப் புரிந்துகொண்டதற்கு நன்றி...
+என்னைத் தேர்ந்தெடுத்ததற்கு நன்றி...
+என் வாழ்க்கையில் இவ்வளவு முக்கியமான
+ஒருவராக மாறியதற்கு நன்றி. <br><br>
 
-        <p>
-            உன்னை சந்தோஷமாக வைத்திருக்க
-            என்னால் முடிந்த அனைத்தையும் செய்வேன்.
-            <br><br>
-            உன் கனவுகள் நனவாகும் நாளை
-            உன்னுடன் நின்று பார்க்க வேண்டும்.
-            <br>
-            உன் வெற்றியில் உன்னைவிட
-            அதிகமாக சந்தோஷப்பட வேண்டும்.
-            🥹💞
-        </p>
+என் வாழ்க்கையை அழகாக மாற்றிய அழகியே... ❤️
+என் வாழ்வில் வந்ததற்கு நன்றி. 🫂💞 <br><br>
 
-        <p>
-            இந்த நான்கு மாதங்கள்
-            என் வாழ்க்கையின் முடிவு அல்ல...
-            <br><br>
-            இது நம் வாழ்நாள் கதையின்
-            முதல் சில பக்கங்கள் மட்டுமே. ♾️
-        </p>
+மீண்டும் ஒருமுறை
+உன்னைத் தேர்ந்தெடுக்க வேண்டியிருந்தாலும்,
+என் தேர்வு எப்போதும் நீதான். ❤️‍🩹 <br><br>
 
-        <p>
-            இன்னும் நிறைய நினைவுகள் வேண்டும்...
-            <br>
-            இன்னும் நிறைய சிரிப்புகள் வேண்டும்...
-            <br>
-            இன்னும் நிறைய சண்டைகள்,
-            சமாதானங்கள்,
-            பயணங்கள்,
-            இரவு நேர பேச்சுகள்,
-            சமையல்,
-            காதல்...
-            <br><br>
-            எல்லாமே உன்னுடன் வேண்டும். ❤️
-        </p>
+என் உலகமே...
+என் உயிரே...
+என் வாழ்க்கையின் அழகான பகுதி நீதான். 🥹🫶 <br><br>
 
-        <p class="promise">
-            என்னை தேர்ந்தெடுத்ததற்கு நன்றி, என் அன்பே. ❤️
-            <br><br>
-            மீண்டும் ஒரு முறை வாழ்க்கையை
-            தேர்ந்தெடுக்க சொன்னாலும்...
-            <br>
-            நான் தேர்ந்தெடுப்பது
-            <strong>உன்னைத்தான்.</strong>
-        </p>
+இந்த நான்கு மாதங்கள் மட்டுமல்ல...
+என் வாழ்க்கை முழுவதும்
+உன்னுடன் இருக்க வேண்டும் என்பதுதான் என் ஆசை. ♾️❤️
 
-        <div class="letter-ending">
-            <span>என்றும் உன்னுடன்...</span>
-            <br>
-            <strong>உன் காதல் ❤️♾️</strong>
-        </div>
 
     </div>
 
 </section>
+
+
+<!-- REASONS -->
+
+<section id="reasons">
+
+  <h2>Why I Chose You ❤️</h2>
+
+<div class="reason">
+    I don't really have a reason for choosing you...
+    because I never needed one.
+    My heart just knew that it was you.
+</div>
+
+<div class="reason">
+    You were the only soul who truly understood me,
+    even when I couldn't explain what I was feeling.
+    You cared for me, protected me,
+    and loved me like I was your little baby. 🥹🫂
+</div>
+
+<div class="reason">
+    And just like a child can never bear to see
+    their mother sad or crying,
+    I can't bear to see you hurt, depressed,
+    or even shed a single tear.
+    Your happiness means more to me than anything. ❤️‍🩹
+</div>
+
+<div class="reason">
+    Whatever happens in life,
+    whatever problems come our way,
+    you will always be the only one I want.
+    I will do anything I can to make you happy,
+    to see you smile, and to keep you with me.
+    Because having you in my life is something
+    I never want to lose. ♾️❤️
+</div>
+
+<br>
+
+<p>
+    So if you ever ask me why I chose you...
+    <br><br>
+    I don't have a reason.
+    <br>
+    I just have you.
+    <br><br>
+    And honestly...
+    that's all I ever wanted. ❤️‍🩹🫶
+</p>
+
+</section>
+
+
+<!-- FUTURE -->
+
+<section id="future">
+
+   <h2>Our Future ♾️</h2>
+
+<p>
+    Four months is only the beginning of our story.
+    <br><br>
+
+    I want us to grow together,
+    learn together, build our dreams together,
+    and become better versions of ourselves together.
+    <br><br>
+
+    I want to see you achieve every ambition you have.
+    And whatever it takes, I will always stand beside you
+    and do everything I can to make your dreams come true.
+    <br><br>
+
+    For you, no sacrifice will ever feel like a sacrifice.
+    Because seeing you happy,
+    seeing that beautiful smile on your face,
+    will always be worth everything to me. ❤️‍🩹
+    <br><br>
+
+    Whatever life brings us,
+    I want to face it with you.
+    The good days, the bad days,
+    the fights, the tears, the laughter,
+    and every little moment in between.
+    <br><br>
+
+    I just want to keep growing with you,
+    loving you, taking care of you,
+    and choosing you again and again. ❤️
+</p>
+
+<div class="forever">♾️</div>
+
+<p>
+    Heyyy, home... 🥹❤️
+    <br><br>
+
+    Thank you for choosing this idiot.
+    Thank you for staying with me,
+    understanding me, and loving me
+    even when I'm not easy to handle.
+    <br><br>
+
+    I don't want another month with you.
+    <br>
+    I don't want another year with you.
+    <br><br>
+
+    <strong>
+        I just want my entire lifetime with you.
+    </strong>
+    <br><br>
+
+    I want to wake up knowing you're still mine,
+    grow old with you,
+    watch you achieve everything you've dreamed of,
+    and be there beside you through every chapter of life.
+    <br><br>
+
+    If forever is real,
+    I want mine to be with you.
+    <br><br>
+
+    <strong>
+        My home. My love. My forever. ♾️❤️
+    </strong>
+</p>
+
+    <div class="forever">♾️</div>
+    </p>
+
+    <br>
+
+    <h2>Happy 4 Months, My Love ❤️</h2>
+
+    <p>
+        From friends...
+        to my love...
+        to my lifeline...
+        <br><br>
+        and hopefully, to forever.
+    </p>
+
+</section>
+
+
+<footer>
+    Made with love, just for you- Yuvarajan Priyadharshinee💞🙈🫂
+</footer>
+
+
+<script>
+
+function openLetter() {
+    document.getElementById("letterText").style.display = "block";
+}
+
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("musicButton");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        musicButton.innerHTML = "🎵 Music On";
+    } else {
+        music.pause();
+        musicButton.innerHTML = "🔇 Music Off";
+    }
+}
+
+</script>
+
+</body>
+</html>
