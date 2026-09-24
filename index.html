@@ -407,6 +407,103 @@ body::before {
     object-fit: contain;
     display: block;
 }
+        /* MEMORIES */
+
+#memories {
+    background: #fff7f8;
+    padding: 80px 20px;
+}
+
+#memories h2 {
+    margin-bottom: 15px;
+}
+
+#memories > p {
+    margin-bottom: 40px;
+}
+
+/* 12 IMAGE SLIDES */
+
+.photo-video {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.photo-slide {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.photo-slide img {
+    width: 100%;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* HOVER EFFECT */
+
+.photo-slide:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(139, 38, 53, 0.25);
+}
+
+/* Different slight rotations */
+
+.photo-slide:nth-child(odd) {
+    transform: rotate(-1.5deg);
+}
+
+.photo-slide:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+.photo-slide:nth-child(odd):hover {
+    transform: rotate(0deg) translateY(-8px) scale(1.03);
+}
+
+.photo-slide:nth-child(even):hover {
+    transform: rotate(0deg) translateY(-8px) scale(1.03);
+}
+
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+    .photo-video {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .photo-slide img {
+        height: 250px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .photo-video {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .photo-slide img {
+        height: 320px;
+    }
+}
     </style>
 </head>
 
@@ -580,7 +677,67 @@ I want it to continue…
 
 </section>
 
+<!-- MEMORIES -->
 
+<section id="memories">
+
+    <h2>Our Little Moments 📸💞</h2>
+
+    <p>A few moments that became some of my favourite memories. 🥹❤️</p>
+
+    <div class="photo-video">
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo1.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo2.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo3.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo4.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo5.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo6.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo7.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo8.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo9.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo10.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo11.jpg">
+        </div>
+
+        <div class="photo-slide">
+            <img src="https://raw.githubusercontent.com/yuvarajan824-glitch/our-story/12d58ebde39f4a6c77faff804f3aa208212fa3da/photo12.jpg">
+        </div>
+
+    </div>
+
+</section>
 <!-- LETTER -->
 
 <section id="letter">
